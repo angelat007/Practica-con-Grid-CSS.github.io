@@ -171,6 +171,8 @@ body {
 
 /* Responsive para móviles */
 @media (max-width: 768px) {
+    html {overflow: scroll;}
+
     body {
         margin: 0;
         width: 100%;
