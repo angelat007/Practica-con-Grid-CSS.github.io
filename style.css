@@ -1,0 +1,223 @@
+html{overflow: hidden;}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 850px;
+    background-color: rgb(237, 248, 255);
+}
+
+.grid-container {
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    grid-template-rows: auto;
+    gap: 15px;
+    width: 80%;
+    max-width: 1000px;
+}
+
+/* Estilos de las cajas */
+.item {
+    padding: 20px;
+    font-size: 1em;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*personas img*/
+.img-persona{
+    width: 12%;
+    height: 20%;
+    border-radius: 50%;
+    border: 2px solid rgb(165, 82, 233);
+    gap: 10px
+}
+
+.img-persona2{
+    width: 15%;
+    height: 20%;
+    border-radius: 50%;
+    border: 2px solid rgb(165, 165, 165);
+    gap: 10px
+}
+
+.img-persona3{
+    width: 25%;
+    height: 10%;
+    border-radius: 50%;
+    border: 2px solid rgb(221, 221, 221);
+    gap: 10px
+}
+
+.img-persona4{
+    width: 17%;
+    height: 25%;
+    border-radius: 50%;
+    gap: 10px
+}
+
+.img-persona5{
+    width: 8.5%;
+    height: 20%;
+    border-radius: 50%;
+    border: 2px solid blueviolet;
+    gap: 10px
+}
+
+/*desplazamos a la izquiera las imagenes*/
+
+.img-persona {
+    margin-left: -275px;
+    position: relative;
+}
+
+.img-persona2{
+    margin-left: -200px;
+}
+
+.img-persona3 {
+    margin-left: -120px;
+}
+
+.img-persona4 {
+    margin-left: -180px;
+}
+
+.img-persona5 {
+    margin-left: -340px;
+}
+
+/*nopmbres*/
+
+.nombre {
+    font-weight: bold;
+}
+
+/* Colores específicos */
+.color-texts{
+    color: rgb(117, 117, 117);
+    font-size: 0.90em;
+}
+
+.color-texto{
+    color: rgb(117, 117, 117);
+    font-size: 0.75em;
+}
+
+.color-text{
+    color: rgb(196, 196, 196);
+}
+
+.bold-txt{
+    font-weight: bold;
+}
+
+/*item*/
+.item1 {
+    background-color: blueviolet;
+    grid-column: span 1;
+    width: 400px;
+    height: 250px;
+    position: static;
+}
+
+.item2 {
+    background-color: rgb(83, 102, 119);
+    grid-column: span 1;
+    width: 340px;
+    height: 250px;
+    position: static;
+}
+
+.item3 {
+    background-color: rgb(241, 241, 241);
+    color: black;
+    grid-column: span 1;
+    height: 480px; /* Más alto */
+    margin-left: -10px;
+    position: static;
+}
+
+.item4 {
+    background-color: rgb(231, 231, 231);
+    color: black;
+    grid-column: span 1; /* Ocupa 2 columnas */
+    width: 300px;
+    height: 200px;
+    transform: translate(-10px, -215px);
+    position: static;
+
+}
+
+.item5 {
+    background-color: rgb(39, 42, 77);
+    grid-column: span 1;
+    width: 450px;
+    height: 200px;
+    margin-left: -98px;
+    transform: translate(-10px, -215px);
+    position: static;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .item {
+        width: 90%;
+        max-width: 400px; /* Evita que sean demasiado anchas */
+        height: auto; /* Permite que se ajusten automáticamente */
+        padding: 15px;
+        text-align: left;
+    }
+
+    .bold-txt,
+    .color-texts,
+    .color-texto,
+    .color-text {
+        text-align: center;
+    }
+
+    /* Centrar imágenes */
+    .img-persona,
+    .img-persona2,
+    .img-persona3,
+    .img-persona4,
+    .img-persona5 {
+        margin: 0 auto; /* Centra horizontalmente */
+        display: block;
+        width: 20%; /* Ajuste proporcional */
+        height: auto;
+        margin-left: -5px;
+    }
+
+    /* Ajustes específicos de cada item */
+    .item1, .item2, .item3, .item4, .item5 {
+        grid-column: span 1;
+        transform: none;
+        margin: 0;
+    }
+}
+
